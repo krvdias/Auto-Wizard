@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('vehicles', function (Blueprint $table) {
-            $table->increments('v_id');
+            $table->id('v_id');
             $table->string('v_type');
             $table->date('last_service_date');
             $table->date('next_service_date');
             $table->char('vehicle_no',10);
-            $table->foreignId('cus_id')->constrained();
+            $table->unsignedBigInteger('cus_id');
+            $table->foreign('cus_id')->references('cus_id')->on('customers');
             $table->timestamps();
         });
     }

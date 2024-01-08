@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->increments('pay_id');
+            $table->id('pay_id');
             $table->string('pay_method');
-            $table->foreignId('cus_id')->constrained();
+            $table->unsignedBigInteger('cus_id');
+            $table->foreign('cus_id')->references('cus_id')->on('customers');
             $table->timestamps();
         });
     }

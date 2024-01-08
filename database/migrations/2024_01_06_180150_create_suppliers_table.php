@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('suppliers', function (Blueprint $table) {
-            $table->increments('sup_id');
+            $table->id('sup_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->char('sup_mobile',10);
-            $table->foreignId('off_id')->constrained();
+            $table->unsignedBigInteger('off_id');
+            $table->foreign('off_id')->references('off_id')->on('officers');
             $table->timestamps();
         });
     }

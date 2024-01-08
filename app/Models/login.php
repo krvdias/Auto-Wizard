@@ -10,6 +10,6 @@ class login extends Model
     use HasFactory;
 
     protected $fillable = [
-        'login_id','date_&_time','login_type','cus_id','off_id'
+        'login_id','login_time','login_type','cus_id','off_id'
     ];
 }

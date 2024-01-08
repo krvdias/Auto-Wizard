@@ -12,11 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('login_details', function (Blueprint $table) {
-            $table->increments('login_d_id');
+            $table->id('login_d_id');
             $table->string('user_name');
             $table->char('password',20);
-            $table->foreignId('cus_id')->constrained();
-            $table->foreignId('off_id')->constrained();
+            $table->unsignedBigInteger('cus_id');
+            $table->foreign('cus_id')->references('cus_id')->on('customers');
+            $table->unsignedBigInteger('off_id');
+            $table->foreign('off_id')->references('off_id')->on('officers');
             $table->timestamps();
         });
     }

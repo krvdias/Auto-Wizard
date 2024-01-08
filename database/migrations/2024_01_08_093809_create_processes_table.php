@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('processes', function (Blueprint $table) {
-            $table->increments('p_id');
+            $table->id('p_id');
             $table->string('p_location');
-            $table->foreignId('off_id')->constrained();
-            $table->foreignId('v_id')->constrained();
+            $table->unsignedBigInteger('off_id');
+            $table->foreign('off_id')->references('off_id')->on('officers');
+            $table->unsignedBigInteger('v_id');
+            $table->foreign('v_id')->references('v_id')->on('vehicles');
             $table->timestamps();
         });
     }

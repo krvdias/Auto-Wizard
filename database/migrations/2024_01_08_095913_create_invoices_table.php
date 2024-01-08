@@ -12,12 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('invoices', function (Blueprint $table) {
-            $table->increments('in_id');
+            $table->id('in_id');
             $table->date('in_date');
             $table->double('total');
-            $table->foreignId('s_id')->constrained();
-            $table->foreignId('pay_id')->constrained();
-            $table->foreignId('cus_id')->constrained();
+            $table->unsignedBigInteger('s_id');
+            $table->foreign('s_id')->references('s_id')->on('services');
+            $table->unsignedBigInteger('pay_id');
+            $table->foreign('pay_id')->references('pay_id')->on('payments');
+            $table->unsignedBigInteger('cus_id');
+            $table->foreign('cus_id')->references('cus_id')->on('customers');
             $table->timestamps();
         });
     }

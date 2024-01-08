@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('invoice_items', function (Blueprint $table) {
-            $table->increments('i_item_id');
+            $table->id('i_item_id');
             $table->string('i_quantity');
             $table->double('unit_price');
             $table->double('tatal_amount');
