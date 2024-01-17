@@ -40,3 +40,7 @@ Route::get('/registerPage', function () {
 Route::get('/dashboardPage', function () {
     return view('dashBoard');
 });
+
+Route::get('/aboutPage', function () {
+    return view('about');
+});
