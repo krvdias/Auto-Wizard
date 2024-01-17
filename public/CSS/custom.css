@@ -1,59 +1,160 @@
-.dashBoard{
-    padding: 20px;
-    /*background-color: blue;*/
+body{
+  background-color: black;
 }
 
-/* General styling for the form */
-form {
-    width: 400px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the form */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/*** Navbar Start ***/
+.navbar .navbar-nav {
+  padding: 15px 0;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding: 15px;
+  color: var(--bs-white);
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active  {
+  color: var(--bs-primary);
+  transition: .5s;
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+      display: block;
+      visibility: hidden;
+      top: 100%;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+      transition: .5s;
+      opacity: 0;
+  }
+}
+
+.dropdown .dropdown-menu a:hover,
+.dropdown .dropdown-menu a.active {
+  background: var(--bs-dark);
+  color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  transition: .5s;
+  opacity: 1;
+}
+
+.navbar-toggler {
+  background: var(--bs-secondary);
+  color: var(--bs-light) !important;
+  padding: 5px 12px;
+  border: 2px solid var(--bs-primary) !important;
+}
+
+/*** Navbar End ***/
+
+/*** Carousel Start ***/
+
+.carousel-item {
+ /* background-position: 100%;*/
+  position: relative;
+  height: 100vh;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .7);
+}
+
+.carousel-caption {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  z-index: 1;
+}
+
+.container carousel-content{
+  border-left: 10px;
+}
+
+.carousel-control-prev {
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /*background: var(--bs-primary);*/
+  border-radius: 0 0 0 0;
+  transition: .5s;
+  opacity: 1;
+}
+
+
+.carousel-control-next {
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /*background: var(--bs-primary);*/
+  border-radius: 0 0 0 0;
+  transition: .5s;
+  opacity: 1;
+}
+
+#carouselId .carousel-indicators li,
+#carouselId .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background: var(--bs-dark);
+  border: 2px solid var(--bs-primary);
+  border-radius: 10px;
+  margin: 0 10px 30px 10px;
+}
+
+#carouselId .carousel-indicators li.active {
+  background: var(--bs-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+      width: 100%;
+      height: 400px;
+  }
+
+  .carousel-item img {
+      height: 400px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+      display: none;
   }
   
-  /* Styling for the heading */
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Styling for the table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  td, th {
-    padding: 8px;
-    text-align: left;
-  }
-  
-  /* Styling for input fields and textarea */
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
-  
-  /* Styling for labels */
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  /* Styling for the submit button */
-  input[type="submit"] {
-    background-color: #007bff; /* Use a primary color */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+}
+
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-2.jpg) center center no-repeat;
+  background-size: cover;
+  margin-bottom: 6rem;
+}
+
+/*** Carousel End ***/
