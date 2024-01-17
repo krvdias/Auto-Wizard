@@ -32,3 +32,7 @@ Route::get('/contactPage', function () {
 Route::get('/servicePage', function () {
     return view('service');
 });
+
+Route::get('/registerPage', function () {
+    return view('registration');
+});
