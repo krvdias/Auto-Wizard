@@ -36,3 +36,11 @@ Route::get('/servicePage', function () {
 Route::get('/registerPage', function () {
     return view('registration');
 });
+
+Route::get('/dashboardPage', function () {
+    return view('dashBoard');
+});
+
+Route::get('/aboutPage', function () {
+    return view('about');
+});

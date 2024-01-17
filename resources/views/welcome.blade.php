@@ -24,19 +24,19 @@
                     </button>
                     <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>                        
-                            <a href="project.html" class="nav-item nav-link">Dashboard</a>
+                            <a href="/homePage" class="nav-item nav-link active">Home</a>
+                            <a href="/aboutPage" class="nav-item nav-link">About</a>                        
+                            <a href="/dashboardPage" class="nav-item nav-link">Dashboard</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <a href="/servicePage" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                                 <div class="dropdown-menu m-0 bg-primary">
-                                    <a href="price.html" class="dropdown-item">Service 01</a>
-                                    <a href="blog.html" class="dropdown-item">Service 02</a>
-                                    <a href="team.html" class="dropdown-item">Service 03</a>
-                                    <a href="testimonial.html" class="dropdown-item">Service 04</a>
+                                    <a href="/servicePage" class="dropdown-item">Service 01</a>
+                                    <a href="/servicePage" class="dropdown-item">Service 02</a>
+                                    <a href="/servicePage" class="dropdown-item">Service 03</a>
+                                    <a href="/servicePage" class="dropdown-item">Service 04</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="/contactPage" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>
@@ -57,7 +57,7 @@
                             <div class="container carousel-content">
                                 <h4 class="text-white mb-4 animated slideInDown">Expert Service, Guaranteed Satisfaction</h4>
                                 <h1 class="text-white display-1 mb-4 animated slideInDown">YOUR CAR'S TRUSTED COMPANION</h1>
-                                <a href="" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
+                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <div class="container carousel-content">
                                 <h4 class="text-white mb-4 ">Expert Service, Guaranteed Satisfaction</h4>
                                 <h1 class="text-white display-1 mb-4 ">YOUR CAR DESERVES THE BEST. GIVE IT TO US.</h1>
-                                <a href="" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
+                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
                             </div>
                         </div>
                     </div>
