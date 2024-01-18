@@ -42,3 +42,11 @@ Route::controller(customerContraller::class)->group(function() {
     Route::get('/registerPage','AddCustomer');
     Route::post('/saveCustomer','save')->name('customer.save');
 });
+
+Route::get('/dashboardPage', function () {
+    return view('dashBoard');
+});
+
+Route::get('/aboutPage', function () {
+    return view('about');
+});

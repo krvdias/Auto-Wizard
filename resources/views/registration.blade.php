@@ -139,7 +139,7 @@ h2{
 
         </style>
     </head>
-    <body class="antialiased">
+    <body>
     <section class="container">
       <h2>Registration</h2>
       <form method="post" action="{{route('customer.save')}}" class="form">
