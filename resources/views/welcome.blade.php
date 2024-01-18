@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{asset('CSS/custom.css')}}"/>
 
     </head>
-   
+
     <body>
         <!-- Navbar Start -->
         <div class="container-fluid bg-transparent">
@@ -25,7 +25,7 @@
                     <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
                             <a href="/homePage" class="nav-item nav-link active">Home</a>
-                            <a href="/aboutPage" class="nav-item nav-link">About</a>                        
+                            <a href="/aboutPage" class="nav-item nav-link">About</a>
                             <a href="/dashboardPage" class="nav-item nav-link">Dashboard</a>
                             <div class="nav-item dropdown">
                                 <a href="/servicePage" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
@@ -57,16 +57,16 @@
                             <div class="container carousel-content">
                                 <h4 class="text-white mb-4 animated slideInDown">Expert Service, Guaranteed Satisfaction</h4>
                                 <h1 class="text-white display-1 mb-4 animated slideInDown">YOUR CAR'S TRUSTED COMPANION</h1>
-                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
+                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-2 btn btn-primary border-2  animated slideInDown">Sign In</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="background-image: url(storage/automobile2.png);">                       
+                    <div class="carousel-item" style="background-image: url(storage/automobile2.png);">
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h4 class="text-white mb-4 ">Expert Service, Guaranteed Satisfaction</h4>
                                 <h1 class="text-white display-1 mb-4 ">YOUR CAR DESERVES THE BEST. GIVE IT TO US.</h1>
-                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Sign In</button></a>
+                                <a href="/signInPage" class="me-2"><button type="button" class="px-5 py-2 btn btn-primary border-2  animated slideInDown">Sign In</button></a>
                             </div>
                         </div>
                     </div>
