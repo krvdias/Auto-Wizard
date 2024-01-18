@@ -142,46 +142,51 @@ h2{
     <body class="antialiased">
     <section class="container">
       <h2>Registration</h2>
-      <form action="#" class="form">
+      <form method="post" action="{{route('customer.save')}}" class="form">
+        @csrf
         <div class="input-box">
           <label>Name</label>
           <div class="column">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
+            <input type="text" placeholder="First Name" name="first_name" required />
+            <input type="text" placeholder="Last Name" name="last_name" required />
           </div>
         </div>
 
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" placeholder="Enter email address" required />
+          <input type="text" placeholder="Enter email address" name="cus_email" required />
         </div>
 
         <div class="input-box">
           <label>User Name</label>
-          <input type="text" placeholder="Enter user name" required />
+          <input type="text" placeholder="Enter user name" name="user_name" required />
         </div>
 
         <div class="input-box">
           <label>Password</label>
           <input type="password" placeholder="Password" required />
           <label>Confirm Password</label>
-          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Password" name="password" required />
         </div>
 
         <div class="column">
           <div class="input-box">
             <label>Phone Number</label>
-            <input type="number" placeholder="Enter phone number" required />
+            <input type="number" placeholder="Enter phone number" name="cus_mobile" required />
           </div>
           <div class="input-box">
             <label>Birth Date</label>
-            <input type="date" placeholder="Enter birth date" required />
+            <input type="date" placeholder="Enter birth date" name="cus_dob" required />
           </div>
         </div>
         <div class="input-box address">
           <label>Address</label>
-          <input type="text" placeholder="Enter street address" required />
-          <input type="text" placeholder="Enter street address line 2" required />
+          <!--<input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />-->
+          <input type="text" id="streetAddress" placeholder="Enter street address" oninput="updateCombinedAddress()" required />
+          <input type="text" id="streetAddressLine2" placeholder="Enter street address line 2" oninput="updateCombinedAddress()" required />
+          <!-- You can add a hidden input field to store the combined address -->
+          <input type="hidden" id="combinedAddressHidden" name="combinedAddress" />
           <div class="column">
             <div class="select-box">
               <select>
@@ -192,7 +197,7 @@ h2{
                 <option>Truck</option>
               </select>
             </div>
-            <input type="text" placeholder="Vehicle Number" required />
+            <input type="text" placeholder="Vehicle Number" name="vehicle_no" required />
           </div>
         </div>
         <button>Submit</button>
@@ -205,4 +210,23 @@ h2{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     </body>
+
+    <script>
+      function updateCombinedAddress() {
+  // Get values from input fields
+      var streetAddress = document.getElementById("streetAddress").value;
+      var streetAddressLine2 = document.getElementById("streetAddressLine2").value;
+
+  // Combine the values
+      var combinedAddress = streetAddress + ', ' + streetAddressLine2;
+
+  // Update the hidden input field with the combined address
+      document.getElementById("combinedAddressHidden").value = combinedAddress;
+
+  // Optionally, you can send the combined address to the server here if needed
+  // Use AJAX or any other method to post the data to the server
+  // Example: sendCombinedAddressToServer(combinedAddress);
+}
+    </script>
+
 </html>

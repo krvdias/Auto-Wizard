@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\customerContraller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,11 @@ Route::get('/servicePage', function () {
     return view('service');
 });
 
-Route::get('/registerPage', function () {
+/*Route::get('/registerPage', function () {
     return view('registration');
+});*/
+
+Route::controller(customerContraller::class)->group(function() {
+    Route::get('/registerPage','AddCustomer');
+    Route::post('/saveCustomer','save')->name('customer.save');
 });
