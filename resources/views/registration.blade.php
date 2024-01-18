@@ -189,7 +189,7 @@ h2{
           <input type="hidden" id="combinedAddressHidden" name="combinedAddress" />
           <div class="column">
             <div class="select-box">
-              <select>
+              <select name="v_type" required>
                 <option hidden>Vehicle Type</option>
                 <option>Car</option>
                 <option>Van</option>
@@ -200,7 +200,7 @@ h2{
             <input type="text" placeholder="Vehicle Number" name="vehicle_no" required />
           </div>
         </div>
-        <button>Submit</button>
+        <button type="submit" value="AddCustomer" >Submit</button>
       </form>
     </section>
 
