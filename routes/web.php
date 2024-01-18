@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\customerContraller;
+use App\Http\Controllers\login_detailContraller;
+use App\Http\Controllers\vehicleContraller;
+use App\Models\vehicle;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +42,16 @@ Route::get('/servicePage', function () {
 });*/
 
 Route::controller(customerContraller::class)->group(function() {
+    Route::get('/registerPage','AddCustomer');
+    Route::post('/saveCustomer','save')->name('customer.save');
+});
+
+Route::controller(login_detailContraller::class)->group(function() {
+    Route::get('/registerPage','AddCustomer');
+    Route::post('/saveCustomer','save')->name('customer.save');
+});
+
+Route::controller(vehicleContraller::class)->group(function() {
     Route::get('/registerPage','AddCustomer');
     Route::post('/saveCustomer','save')->name('customer.save');
 });
