@@ -51,10 +51,10 @@ Route::controller(login_detailContraller::class)->group(function() {
     Route::post('/saveCustomer','save')->name('customer.save');
 });
 
-Route::controller(vehicleContraller::class)->group(function() {
+/*Route::controller(vehicleContraller::class)->group(function() {
     Route::get('/registerPage','AddCustomer');
     Route::post('/saveCustomer','save')->name('customer.save');
-});
+});*/
 
 Route::get('/dashboardPage', function () {
     return view('dashBoard');

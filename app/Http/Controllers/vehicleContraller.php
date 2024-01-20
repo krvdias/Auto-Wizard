@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class vehicleContraller extends Controller
 {
-    public function AddCustomer() {
+    /*public function AddCustomer() {
         return view('registration');
     }
 
@@ -28,5 +28,5 @@ class vehicleContraller extends Controller
 
         return redirect()->back();
 
-    }
+    }*/
 }
