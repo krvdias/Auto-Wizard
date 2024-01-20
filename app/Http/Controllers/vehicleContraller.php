@@ -11,7 +11,7 @@ class vehicleContraller extends Controller
         return view('registration');
     }
 
-    public function save(Request $request){
+    public function save(Request $request, $customerId){
 
         $request->validate([
             // vehicle validate
@@ -22,7 +22,8 @@ class vehicleContraller extends Controller
             'v_type' => $request-> v_type,
             'last_service_date',
             'next_service_date',
-            'vehicle_no' => $request-> vehicle_no
+            'vehicle_no' => $request-> vehicle_no,
+            'cus_id' =>$customerId
         ]);
 
         return redirect()->back();

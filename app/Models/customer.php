@@ -12,4 +12,10 @@ class customer extends Model
     protected $fillable = [
         'cus_id','first_name','last_name','address','cus_mobile','cus_email','cus_dob'
     ];
+
+    /*public function login_detail()
+    {
+        return $this->hasOne(login_detail::class, 'cus_id');
+    }*/
+
 }

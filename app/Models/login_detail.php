@@ -12,4 +12,10 @@ class login_detail extends Model
     protected $fillable = [
         'login_d_id','user_name','password','cus_id','off_id'
     ];
+
+    /*public function customer()
+    {
+        return $this->belongsTo(customer::class, 'cus_id');
+    }*/
+
 }
