@@ -30,16 +30,16 @@ class customerContraller extends Controller
             'cus_id' =>$customer-> id
         ]);
 
-        vehicle::create([
+        /*vehicle::create([
             'v_type' => $request-> v_type,
             'last_service_date',
             'next_service_date',
             'vehicle_no' => $request-> vehicle_no,
             'cus_id' =>$customer-> id
-        ]);
+        ]);*/
 
         app(login_detailContraller::class)->save($request,$customer->id);
-        app(vehicleContraller::class)->save($request,$customer->id);
+        //app(vehicleContraller::class)->save($request,$customer->id);
 
         $notification = [
             "message" => "Customer has been added"
