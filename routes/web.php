@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\customerContraller;
 use App\Http\Controllers\login_detailContraller;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\vehicleContraller;
 use App\Models\vehicle;
 use Illuminate\Support\Facades\Route;
@@ -25,8 +26,13 @@ Route::get('/homePage', function () {
     return view('index');
 });
 
-Route::get('/signInPage', function () {
+/*Route::get('/signInPage', function () {
     return view('signIn');
+});*/
+
+Route::controller(loginController::class)->group(function() {
+    Route::get('/signInPage','SignInCustomer');
+    Route::post('/signInCustomer','signIn')->name('customer.signIn');
 });
 
 Route::get('/contactPage', function () {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\login_detail;
 use App\Http\Controllers\customerContraller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class login_detailContraller extends Controller
 {
@@ -16,7 +17,7 @@ class login_detailContraller extends Controller
 
         login_detail::create([
             'user_name' => $request-> user_name,
-            'password' => $request-> password,
+            'password' => Hash::make($request->input('password')),
             'cus_id' =>$customerId
         ]);
 
