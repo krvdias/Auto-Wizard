@@ -144,11 +144,12 @@
       			<div class="left">
 				<div class="top_link"><a href="/registerPage">Register here</a></div>
 				<div class="contact">
-					<form action="">
+					<form action="post" action="{{route('customer.signIn')}}" class="form">
+            @csrf
 						<h3>SIGN IN</h3>
-						<input type="text" placeholder="USERNAME">
-						<input type="password" placeholder="PASSWORD">
-						<button class="submit">LET'S GO</button>
+						<input type="text" placeholder="USERNAME" name="user_name">
+						<input type="password" placeholder="PASSWORD" name="password">
+						<button type="submit" value="SignInCustomer" class="submit">LET'S GO</button>
 					</form>
 				</div>
 			</div>
